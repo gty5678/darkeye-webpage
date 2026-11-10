@@ -5,76 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="DarkEye 暗眼 使用手册">
   <title>DarkEye 暗眼 — 使用手册</title>
-  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="header">
-    <nav class="nav">
-      <a href="index.html" class="nav-logo">
-        <img src="assets/logo.svg" alt="DarkEye" class="nav-logo-icon">
-        <span class="nav-logo-text">DarkEye</span>
-      </a>
-      <a href="manual.html" class="nav-cta" target="_self">使用手册</a>
-      <a href="https://github.com/de4321/darkeye/releases" class="nav-cta" target="_blank" rel="noopener noreferrer">下载</a>
-      <a href="https://github.com/de4321/darkeye" class="nav-cta" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </nav>
-  </header>
+<header class="header"><nav class="nav" aria-label="主导航"><a class="brand" href="index.html"><img src="assets/logo.svg?v=2" alt="" width="30" height="30">DarkEye<span>暗眼</span></a><div class="nav-links"><a href="#experience">界面探索</a><a href="#workflow">功能</a><a href="manual.html">使用手册</a><a href="https://github.com/gty5678/darkeye">GitHub ↗</a></div><a class="button small" href="#download">获取 DarkEye <span>↗</span></a></nav></header>
 
   <main>
-    <section class="section">
-      <h1 class="section-title">DarkEye 使用手册（简要）</h1>
-      <p class="hero-desc">本页面为 DarkEye 桌面应用的快速上手说明，详细文档可在 GitHub 仓库中查看。</p>
+    <section class="section wrap manual">
+      <h1 >DarkEye 使用手册（简要）</h1>
+      <p >本页面为 DarkEye 桌面应用的快速上手说明，详细文档可在 GitHub 仓库中查看。</p>
 
-      <h2 class="philosophy-card-title">1. 安装与运行</h2>
-      <ul class="feature-desc">
-        <li>前往 <a href="https://github.com/de4321/darkeye/releases" target="_blank" rel="noopener noreferrer">GitHub Releases</a> 页面，下载最新版本压缩包或安装包。</li>
+      <h2 >1. 安装与运行</h2>
+      <ul >
+        <li>前往 <a href="https://github.com/gty5678/darkeye/releases" target="_blank" rel="noopener noreferrer">GitHub Releases</a> 页面，下载最新版本压缩包或安装包。</li>
         <li>按 Releases 页面中的说明解压或安装，并根据你的操作系统选择对应的运行方式。</li>
         <li>首次运行建议先在设置中配置数据存储路径和备份目录。</li>
       </ul>
 
-      <h2 class="philosophy-card-title">2. 基本概念</h2>
-      <p class="feature-desc">
+      <h2 >2. 基本概念</h2>
+      <p >
         DarkEye 将收藏对象、标签、事件和行为统一管理，通过本地数据库与图谱实现“收藏 + 情报分析”的工作流。
       </p>
-      <ul class="feature-desc">
+      <ul >
         <li>收藏：通过手动录入或爬虫采集，将条目整理进本地库。</li>
         <li>标签与人物：为条目添加多维标签，构建偏好画像和关系网络。</li>
         <li>记录：对行为进行时间线记录，用于后续的趋势分析与自我量化。</li>
       </ul>
 
-      <h2 class="philosophy-card-title">3. 浏览器插件与采集</h2>
-      <ul class="feature-desc">
-        <li>在 GitHub 仓库中找到 `extensions/firefox_capture` 相关说明。</li>
-        <li>在 Firefox 地址栏输入 <code>about:debugging</code>，临时加载插件的 <code>manifest.json</code>。</li>
+      <h2 >3. 浏览器插件与采集</h2>
+      <ul >
+        <li>根据 <a href="https://gty5678.github.io/darkeye/usage/">在线安装文档</a>，安装 mosaic 桥接器与对应的 Chrome / Edge / Firefox 扩展。</li>
+        <li>启动本地应用和桥接器，在浏览器中加载对应平台的扩展，确认扩展已连接本机应用。</li>
         <li>打开支持的网站后，点击工具栏图标或页面中的按钮即可将元数据发送到本地 DarkEye。</li>
       </ul>
 
-      <h2 class="philosophy-card-title">4. 数据与隐私</h2>
-      <ul class="feature-desc">
+      <h2 >4. 数据与隐私</h2>
+      <ul >
         <li>所有数据默认保存在本地 SQLite 数据库中，不上传到云端。</li>
         <li>推荐定期在设置中启用或配置备份，防止误删或磁盘损坏导致的数据丢失。</li>
-        <li>可根据需要使用伪装模式，将窗口样式与文件结构伪装为常规办公软件。</li>
+        <li>采集、资源拉取及可选的更新下载、在线翻译会联网。第三方翻译服务可自行配置。</li>
       </ul>
 
-      <h2 class="philosophy-card-title">5. 更多文档</h2>
-      <p class="feature-desc">
-        更多高级功能（如力导向图、分析报表、自定义脚本等）请访问
-        <a href="https://github.com/de4321/darkeye" target="_blank" rel="noopener noreferrer">GitHub 仓库</a>
+      <h2 >5. 更多文档</h2>
+      <p >
+        更多功能（如力导向图、分析图表、NFO 导入等）请访问
+        <a href="https://github.com/gty5678/darkeye" target="_blank" rel="noopener noreferrer">GitHub 仓库</a>
         中的 <code>README.md</code> 与 <code>docs/</code> 文档。
       </p>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <a href="https://github.com/de4321/darkeye" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
-      <p class="footer-copy">DarkEye — 本地化元数据管理与情报分析</p>
-    </div>
-  </footer>
+<footer class="wrap footer"><a class="brand" href="index.html"><img src="assets/logo.svg?v=2" width="24" height="24" alt="">DarkEye</a><span>洞察与秩序 · 本地资料书架，安全自管。</span><div><a href="https://gty5678.github.io/darkeye/">文档 ↗</a><a href="https://github.com/gty5678/darkeye">GitHub ↗</a></div></footer>
 
   <script src="js/main.js"></script>
 </body>
